@@ -29,18 +29,18 @@ if (isset($_POST['username'])) {
       <form method="post">
         <!-- Username input -->
         <div class="form-outline mb-3">
+          <input type="text" id="username" name="username" class="form-control" />
           <label class="form-label" for="username border">Username</label>
-          <input type="text" id="username" name="username" class="form-control border" />
         </div>
         <!-- Email input -->
         <div class="form-outline mb-3">
+          <input type="email" id="email" name="email" class="form-control" />
           <label class="form-label" for="email">Email address</label>
-          <input type="email" id="email" name="email" class="form-control border" />
         </div>
         <!-- Password input -->
         <div class="form-outline mb-3">
+          <input type="password" id="password" name="password" class="form-control" />
           <label class="form-label" for="password">Password</label>
-          <input type="password" id="password" name="password" class="form-control border" />
         </div>
         <!-- Active select -->
         <div class="form-outline mb-3">

@@ -1,4 +1,5 @@
 <div id="toast"></div>
+
 <script>
   function showToast(message, position, type) {
     const toast = document.getElementById("toast");
@@ -14,6 +15,7 @@
     }, 3000);
   }
 </script>
+<script src="js/mdb.min.js"></script>
 <?php get_message(); ?>
 </body>
 

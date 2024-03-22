@@ -42,13 +42,13 @@ if (isset($_POST['email'])) {
       <form method="post">
         <!-- Email input -->
         <div class="form-outline mb-3">
+          <input type="email" id="email" name="email" class="form-control" />
           <label class="form-label" for="email">Email address</label>
-          <input type="email" id="email" name="email" class="form-control border" />
         </div>
         <!-- Password input -->
         <div class="form-outline mb-3">
+          <input type="password" id="password" name="password" class="form-control" />
           <label class="form-label" for="password">Password</label>
-          <input type="password" id="password" name="password" class="form-control border" />
         </div>
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
