@@ -43,15 +43,15 @@ if (isset($_POST['email'])) {
     <div class="col-md-6">
       <form method="post">
         <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="email" name="email" class="form-control" />
+        <div class="form-outline mb-3">
           <label class="form-label" for="email">Email address</label>
+          <input type="email" id="email" name="email" class="form-control border" />
         </div>
 
         <!-- Password input -->
-        <div class="form-outline mb-4">
-          <input type="password" id="password" name="password" class="form-control" />
+        <div class="form-outline mb-3">
           <label class="form-label" for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control border" />
         </div>
 
 
@@ -63,5 +63,6 @@ if (isset($_POST['email'])) {
 
   </div>
 </div>
+
 <?php
 include('includes/footer.php');
