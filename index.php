@@ -18,10 +18,8 @@ if (isset($_POST['email'])) {
     $hashed = SHA1($_POST['password']);
     $stm->bind_param('ss', $_POST['email'], $hashed);
     $stm->execute();
-
     $result = $stm->get_result();
     $user = $result->fetch_assoc();
-
     if ($user) {
       $_SESSION['id'] = $user['id'];
       $_SESSION['email'] = $user['email'];
@@ -47,20 +45,15 @@ if (isset($_POST['email'])) {
           <label class="form-label" for="email">Email address</label>
           <input type="email" id="email" name="email" class="form-control border" />
         </div>
-
         <!-- Password input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="password">Password</label>
           <input type="password" id="password" name="password" class="form-control border" />
         </div>
-
-
-
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
       </form>
     </div>
-
   </div>
 </div>
 
