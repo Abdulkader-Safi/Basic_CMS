@@ -6,6 +6,13 @@ include('includes/functions.php');
 
 include('includes/header.php');
 
+if (isset($_SESSION['id'])) {
+  set_message("You are already logged in");
+  header('Location: dashboard.php');
+  die();
+}
+
+
 if (isset($_POST['email'])) {
   if ($stm = $connect->prepare('select * from users where email = ? and password = ? and active = 1')) {
     $hashed = SHA1($_POST['password']);
@@ -20,7 +27,7 @@ if (isset($_POST['email'])) {
       $_SESSION['email'] = $user['email'];
       $_SESSION['username'] = $user['username'];
 
-      // TODO: give a welcome message
+      set_message('You have successfully logged in ' . $_SESSION['username']);
       header('location: dashboard.php');
       die();
     }
